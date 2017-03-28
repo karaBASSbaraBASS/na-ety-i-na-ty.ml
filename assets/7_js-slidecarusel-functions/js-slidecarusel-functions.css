@@ -1,0 +1,157 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* .wrapper {
+  width: 950px;
+  margin: 0 auto;
+}  */
+.container {
+  width: 80%;
+  margin: 0 10%;
+  background: #c4c4c4;
+  text-align: center;
+  font-size: 0px;
+}
+
+.slider {
+  width: 99%;
+  overflow: hidden;
+  display: inline-block;
+}
+.slider .slider__list {
+  position: relative;
+  width: 100%;
+}
+.slider .slider__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+}
+.slider .slider__item img {
+  width: 100%;
+  display: block;
+}
+.slider .slider__item.active {
+  z-index: 1;
+  position: relative;
+}
+.slider .slider__item.inslide {
+  z-index: 2;
+}
+
+.slider__controls-button {
+  position: relative;
+  top: 90px;
+  display: block;
+  z-index: 6;
+  width: 16px;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px 12px 6px 10px;
+  border: 1px solid #000;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-top: -39px;
+}
+.slider__controls-button:hover {
+  background-color: white;
+}
+
+.slider__controls-button_next {
+  right: -95%;
+  top: -180px;
+}
+
+.slider__controls-button_prev {
+  left: 1%;
+  top: -180px;
+}
+
+/* ╨Ъ╨╜╨╛╨┐╨║╨╕ ╤Б╨╝╨╡╨╜╤Л ╤Б╨╗╨░╨╣╨┤╨╛╨▓ */
+.slider__dots {
+  margin-top: -20px;
+  text-align: center;
+  z-index: 6;
+  position: relative;
+  top: -15px;
+}
+
+.slider__dots-item {
+  margin: 2px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
+  border: 3px solid #fff;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #551a8b;
+}
+.slider__dots-item:hover {
+  cursor: pointer;
+  background-color: #e00;
+}
+.slider__dots-item.active {
+  background-color: #000;
+}
