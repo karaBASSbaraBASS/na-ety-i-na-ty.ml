@@ -55,10 +55,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* --------- mixins --------- */
+/* --------- centered --------- */
+/* --------- compass sprites --------- */
+/* --------- responsive mixins --------- */
 body {
   margin: 0;
   padding: 0;
   min-width: 600px;
+}
+
+h3 {
+  font-size: 27px;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 25px;
 }
 
 .wrapper {
@@ -67,11 +80,15 @@ body {
   font-size: 0px;
 }
 
+.content {
+  max-width: 980px;
+}
+
 .nav {
   position: fixed;
   top: 0;
   height: 50px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(90, 90, 90, 0.5);
   line-height: 50px;
   width: 100%;
   min-width: 600px;
@@ -111,8 +128,8 @@ li.nav__item + li.nav__item {
 }
 
 .section {
-  height: 700px;
-  margin-top: -45px;
+  min-height: 980px;
+  /* margin-top: -45px; */
 }
 
 .section__title h1 {
@@ -123,164 +140,212 @@ li.nav__item + li.nav__item {
 }
 
 .section__one {
-  background-color: #2ACE9E;
+  min-height: 470px;
+  background-color: #000;
 }
 
 .section__two {
-  background-color: #3E9CD9;
+  background-color: #000;
+  color: #fff;
 }
 
 .section__three {
-  background-color: #37495F;
+  background-color: #fff;
+}
+.section__three .section__title-item {
+  color: #000;
 }
 
 .section__four {
-  background-color: #DB3D3F;
+  background-color: #000;
 }
 
 .section__five {
-  background-color: #BFC1C8;
+  background-color: #000;
+  color: #000;
 }
 
-.section__six {
-  background-color: #E8991A;
+/*------------------------home section--------------------------*/
+.home__background {
+  position: relative;
+  overflow: hidden;
+  background: #FFF;
 }
 
-.section__seven {
-  background-color: #984AB5;
-}
-
-/*------------------------TABS--------------------------*/
-/* Базовый контейнер табов */
-.tabs {
-  min-width: 320px;
-  max-width: 800px;
-  padding: 0px;
-  margin: 0 auto;
-  font-size: 18px;
-}
-
-/* Стили секций с содержанием */
-.tabs__content {
-  display: none;
-  padding: 15px;
-  background: #fff;
-  border: 1px solid #ddd;
-}
-
-.tabs__content-description {
-  margin: 0 0 5px;
-  line-height: 1.5;
-  color: #383838;
-  /* прикрутим анимацию */
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
-
-/* Описываем анимацию свойства opacity */
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-/* Прячем чекбоксы */
-.tabs__item {
-  display: none;
+.background__img {
+  height: 470px;
   position: absolute;
+  left: 20%;
 }
 
-/* Стили переключателей вкладок (табов) */
-.tabs__label {
-  display: inline-block;
-  margin: 0 0 -1px;
-  padding: 15px 25px;
-  font-weight: 600;
-  text-align: center;
-  color: #aaa;
-  border: 0px solid #ddd;
-  border-width: 1px 1px 1px 1px;
-  background: #f1f1f1;
-  border-radius: 3px 3px 0 0;
+.home__container {
+  min-height: 470px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #000;
 }
 
-/* Шрифт-иконки от Font Awesome в формате Unicode */
-.tabs__label:before {
-  font-family: fontawesome;
-  font-weight: normal;
-  margin-right: 10px;
+.home__wrap {
+  min-height: 400px;
 }
 
-.tabs__label[for*="1"]:before {
-  content: "\f19a";
+.homeSlider {
+  width: 570px;
+  height: 200px;
+  margin: 0 auto;
+  padding-top: 130px;
+  position: relative;
 }
 
-.tabs__label[for*="2"]:before {
-  content: "\f17a";
+.homeSlider__slider {
+  float: left;
+  overflow: hidden;
+}
+.homeSlider__slider .homeSlider__slider-item {
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+.homeSlider__slider .homeSlider__slider-item .homeSlider__slider-img {
+  max-width: 100%;
+  height: 180px;
+  position: absolute;
+  left: -48%;
+  padding-top: 10px;
+  z-index: -1;
+}
+.homeSlider__slider .homeSlider__slider-item .active {
+  max-width: 100%;
+  height: 180px;
+  position: absolute;
+  left: -48%;
+  padding-top: 10px;
+  z-index: 1;
+  position: relative;
 }
 
-.tabs__label[for*="3"]:before {
-  content: "\f13b";
+.homeSlider__devider {
+  float: left;
+  height: 200px;
+  border: 2px solid #fff;
+}
+.homeSlider__devider:before, .homeSlider__devider:after {
+  content: "";
+  display: table;
+}
+.homeSlider__devider:after {
+  clear: both;
 }
 
-.tabs__label[for*="4"]:before {
-  content: "\f13c";
+.homeSlider__description {
+  float: left;
+  text-align: right;
+  padding: 49px 20px 0px 120px;
+}
+.homeSlider__description:before, .homeSlider__description:after {
+  content: "";
+  display: table;
+}
+.homeSlider__description:after {
+  clear: both;
+}
+.homeSlider__description .homeSlider__description-item {
+  padding: 0;
+}
+.homeSlider__description .homeSlider__description-item .homeSlider__description-link {
+  color: #FFF;
+  text-decoration: none;
 }
 
-/* Изменения стиля переключателей вкладок при наведении */
-.tabs__label:hover {
-  color: #888;
-  cursor: pointer;
+.arrowDown {
+  margin: 30px 0;
 }
 
-/* Стили для активной вкладки */
-.tabs__item:checked + label {
-  color: #555;
-  border-top: 1px solid #009933;
-  border-bottom: 1px solid #fff;
-  background: #fff;
+.arrowDown__border {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #fff;
+  -moz-transform: rotate(45deg);
+  /* ╨Ф╨╗╤П Firefox */
+  -ms-transform: rotate(45deg);
+  /* ╨Ф╨╗╤П IE */
+  -webkit-transform: rotate(45deg);
+  /* ╨Ф╨╗╤П Safari, Chrome, iOS */
+  -o-transform: rotate(45deg);
+  /* ╨Ф╨╗╤П Opera */
+  transform: rotate(45deg);
+  margin: 0 auto;
 }
 
-/* Активация секций с помощью псевдокласса :checked */
-#tab1:checked ~ #content-tab1, #tab2:checked ~ #content-tab2, #tab3:checked ~ #content-tab3, #tab4:checked ~ #content-tab4 {
-  display: block;
+.arrowDown__arrow {
+  padding: 10px;
+  margin: 12px;
+  border-right: 7px solid #fff;
+  border-bottom: 7px solid #fff;
 }
 
-/* Убираем текст с переключателей 
-* и оставляем иконки на малых экранах
-*/
-@media screen and (max-width: 745px) {
-  .tabs__label {
-    font-size: 0;
-  }
+.HomeDescriptoin {
+  min-height: 350px;
+  background: #FFF;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.HomeDescriptoin:before, .HomeDescriptoin:after {
+  content: "";
+  display: table;
+}
+.HomeDescriptoin:after {
+  clear: both;
+}
 
-  .tabs__label:before {
-    margin: 0;
-    font-size: 18px;
-  }
+.HomeDescriptoin__title {
+  text-align: right;
+  float: left;
+  width: 50%;
 }
-/* Изменяем внутренние отступы 
-*  переключателей для малых экранов
-*/
-@media screen and (max-width: 600px) {
-  .tabs__label {
-    padding: 15px;
-  }
+.HomeDescriptoin__title .main__title {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 50px;
+  padding: 30px;
 }
+.HomeDescriptoin__title .main__titleDescription:before, .HomeDescriptoin__title .main__titleDescription:after {
+  content: "";
+  display: table;
+}
+.HomeDescriptoin__title .main__titleDescription:after {
+  clear: both;
+}
+.HomeDescriptoin__title .main__titleDescription .title__devider {
+  height: 65px;
+  width: 4px;
+  background: #000;
+  float: right;
+}
+.HomeDescriptoin__title .main__titleDescription .main__workTime {
+  color: #000;
+  text-transform: uppercase;
+  float: right;
+  line-height: 65px;
+  padding: 0 20px;
+}
+
+.HomeDescriptoin__description {
+  float: left;
+  width: 49%;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.HomeDescriptoin__description .description {
+  text-align: left;
+  font: normal normal normal 17px/1.4em 'times new roman',times,serif;
+}
+.HomeDescriptoin__description p + p {
+  padding-top: 20px;
+}
+
 /*--------------------Accordeon----------------*/
 .accordeon {
   width: 300px;
@@ -296,7 +361,7 @@ ul.accordeon__list {
   text-decoration: none;
   color: #fff;
   font-weight: 600;
-  background-color: #2ACE9E;
+  background-color: #000;
   display: block;
   padding: 6px;
   border: 1px solid #ddd;
@@ -387,107 +452,3 @@ ul.accordeon__list {
 }
 
 /*------------------Carousel----------------------*/
-.contain {
-  width: 80%;
-  margin: 0 auto;
-  background: #551a8b;
-  text-align: center;
-  font-size: 0px;
-}
-
-.slider {
-  width: 94%;
-  overflow: hidden;
-  display: inline-block;
-  margin-bottom: -16px;
-}
-
-ul.slider__list {
-  padding-left: 0;
-}
-
-.slider .slider__list {
-  position: relative;
-  width: 100%;
-}
-
-.slider .slider__item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  width: 100%;
-}
-
-.slider .slider__item img {
-  width: 900px;
-  display: block;
-  margin: 0 auto;
-}
-
-.slider .slider__item.active {
-  z-index: 1;
-  position: relative;
-  margin: 0;
-}
-
-.slider .slider__item.inslide {
-  z-index: 2;
-}
-
-.slider__controls-button {
-  position: relative;
-  top: 90px;
-  display: inline-block;
-  z-index: 6;
-  width: 16px;
-  font-size: 20px;
-  text-decoration: none;
-  padding: 10px 12px 6px 10px;
-  /* border: 1px solid #000; */
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  margin-top: -39px;
-}
-
-.slider__controls-button:hover {
-  background-color: white;
-}
-
-.slider__controls-button_next {
-  right: -45%;
-  top: -200px;
-}
-
-.slider__controls-button_prev {
-  left: -45%;
-  top: -200px;
-}
-
-/* .slider__dots {
-  margin-top: -20px;
-  text-align: center;
-  z-index: 6;
-  position: relative;
-  top: -15px;
-}
-
-.slider__dots-item {
-  margin: 2px;
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  overflow: hidden;
-  border: 3px solid #fff;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  background-color: #551a8b;
-}
-.slider__dots-item:hover {
-  cursor: pointer;
-  background-color: #e00;
-}
-.slider__dots-item.active {
-  background-color: #000;
-} */
