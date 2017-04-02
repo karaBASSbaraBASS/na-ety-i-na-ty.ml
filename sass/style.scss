@@ -98,6 +98,7 @@ li.nav__item + li.nav__item {
 .section__one {
   min-height: 470px;
 	background-color: $firstSec;
+  overflow: hidden;
 }
 
 .section__two {
@@ -127,25 +128,24 @@ li.nav__item + li.nav__item {
 
 /*------------------------home section--------------------------*/
 .home__background {
+  width: 100%;
   position: relative;
-  overflow: hidden;
   background: #FFF;
 }
 
-.background__img {
-  height: 470px;
-  position: absolute;
-  left: 20%;
-  
+.background__cover {
+  position: relative;
+  overflow: hidden;
+  min-height: 470px;
 }
 
-.home__container {
-  min-height: 470px;
-  margin: 0 auto;
-  overflow: hidden;
-  background: #000;
-  
+.background__img {
+  width: 100%;
+  position: absolute;
+  left: 0;
 }
+
+
 
 .home__wrap {
   min-height: 400px;
@@ -247,18 +247,18 @@ padding-top: 50px;
 
 }
 
-.HomeDescriptoin__title {
-  text-align: right;
-  float: left;
-  width: 50%;
-  
-  .main__title {
+.main__title {
     color: #000;
     text-transform: uppercase;
     font-size: 50px;
     padding: 30px;
   }
 
+.HomeDescriptoin__title {
+  text-align: right;
+  float: left;
+  width: 50%;
+    
   .main__titleDescription {
     @include clearfix;
 
@@ -281,6 +281,11 @@ padding-top: 50px;
   }
 }
 
+.description {
+    text-align: left;
+    font: normal normal normal 17px/1.4em 'times new roman',times,serif;
+  }
+
 .HomeDescriptoin__description {
   float: left;
   width: 49%;
@@ -289,10 +294,7 @@ padding-top: 50px;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
   
-  .description {
-    text-align: left;
-    font: normal normal normal 17px/1.4em 'times new roman',times,serif;
-  }
+  
 
   p+p {
     padding-top: 20px;
@@ -300,60 +302,99 @@ padding-top: 50px;
 }
 
 
-/*--------------------Accordeon----------------*/
-.accordeon {
-	width: 300px;
-	margin: 0 auto;
-	font-size: 18px;
+/*--------------------Masters----------------*/
+
+.section__two {
+  position: relative;
+  overflow: hidden;
+  
+  .section__title{
+    position: relative;
+  }
+
+  .title__img {
+    width: 100px;
+    padding: 30px;
+  }
+
 }
 
-ul.accordeon__list {
-	padding-left: 0;
+.masters {
+  overflow: hidden;
+  margin: 0 auto;
 }
 
-.accordeon__trigger {
-	text-decoration: none;
-	color: #fff;
-	font-weight: 600;
-	background-color: $firstSec;
-	display: block;
-	padding: 6px;
-	border: 1px solid #ddd;
-	text-align: left;
-	padding-left: 15px;
-	
-	i {
-		padding-right: 15px;
-	}
-	
-}
-	
-.accordeon__inner {
-	padding-left: 0;
-	background: #FFF;
+.masters__cover {
+  position: absolute;
+  opacity: 0.2;
 }
 
-.accordeon__item {
-	margin-bottom: 10px;
-	list-style: none;
-	-webkit-border-radius: 3px;
-	        border-radius: 3px;
+
+.masters__item {
+  position: relative;
+  @include clearfix;
+  
+  .masters__image {
+    float: left;
+    width: 49%;
+    padding: 30px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    
+    .masters__changer {
+      float: right;
+      height: 300px;
+      width: 300px;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+    }
+
+    .masters__changer--first {
+      background: url(../img/masters/kolia_za_rabotoj.jpg) no-repeat -40px -10px;
+    }
+
+    .masters__changer--first:hover {
+      background: url(../img/masters/kolia.jpg) no-repeat -60px 0;
+    }
+
+    .masters__changer--second {
+      background: url(../img/masters/bogdan_za_rabotoj.jpg) no-repeat -100px -10px;
+      float: left;
+    }
+
+    .masters__changer--second:hover {
+      background: url(../img/masters/bogdan.jpg) no-repeat 0px 0;
+      float: left;
+    }
+  }
+
+  .masters__description {
+    height: 360px;
+    display: block;
+    float: left;
+    width: 49%;
+    padding: 30px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    
+    .main__title {
+      text-align: left;
+      color: #FFF;
+    }
+
+    .main__title--odd {
+      text-align: right;
+    }
+
+    .description {
+      color: #FFF;
+    } 
+  }
 }
 
-.accordeon__inner-item {
-	list-style: none;
-}
 
-.accordeon__inner-link {
-	text-decoration: none;
-	color: #34495e;
-	border-bottom: 1px dotted #34495e;
-}
-
-.accordeon__inner {
-	display: none;
-} 
-	
 /*------------------slideshow---------------*/
 .slideshow {
 	margin: -35px auto;

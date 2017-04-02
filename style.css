@@ -142,6 +142,7 @@ li.nav__item + li.nav__item {
 .section__one {
   min-height: 470px;
   background-color: #000;
+  overflow: hidden;
 }
 
 .section__two {
@@ -167,22 +168,21 @@ li.nav__item + li.nav__item {
 
 /*------------------------home section--------------------------*/
 .home__background {
+  width: 100%;
   position: relative;
-  overflow: hidden;
   background: #FFF;
 }
 
-.background__img {
-  height: 470px;
-  position: absolute;
-  left: 20%;
+.background__cover {
+  position: relative;
+  overflow: hidden;
+  min-height: 470px;
 }
 
-.home__container {
-  min-height: 470px;
-  margin: 0 auto;
-  overflow: hidden;
-  background: #000;
+.background__img {
+  width: 100%;
+  position: absolute;
+  left: 0;
 }
 
 .home__wrap {
@@ -298,16 +298,17 @@ li.nav__item + li.nav__item {
   clear: both;
 }
 
-.HomeDescriptoin__title {
-  text-align: right;
-  float: left;
-  width: 50%;
-}
-.HomeDescriptoin__title .main__title {
+.main__title {
   color: #000;
   text-transform: uppercase;
   font-size: 50px;
   padding: 30px;
+}
+
+.HomeDescriptoin__title {
+  text-align: right;
+  float: left;
+  width: 50%;
 }
 .HomeDescriptoin__title .main__titleDescription:before, .HomeDescriptoin__title .main__titleDescription:after {
   content: "";
@@ -330,6 +331,11 @@ li.nav__item + li.nav__item {
   padding: 0 20px;
 }
 
+.description {
+  text-align: left;
+  font: normal normal normal 17px/1.4em 'times new roman',times,serif;
+}
+
 .HomeDescriptoin__description {
   float: left;
   width: 49%;
@@ -338,64 +344,91 @@ li.nav__item + li.nav__item {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.HomeDescriptoin__description .description {
-  text-align: left;
-  font: normal normal normal 17px/1.4em 'times new roman',times,serif;
-}
 .HomeDescriptoin__description p + p {
   padding-top: 20px;
 }
 
-/*--------------------Accordeon----------------*/
-.accordeon {
-  width: 300px;
+/*--------------------Masters----------------*/
+.section__two {
+  position: relative;
+  overflow: hidden;
+}
+.section__two .section__title {
+  position: relative;
+}
+.section__two .title__img {
+  width: 100px;
+  padding: 30px;
+}
+
+.masters {
+  overflow: hidden;
   margin: 0 auto;
-  font-size: 18px;
 }
 
-ul.accordeon__list {
-  padding-left: 0;
+.masters__cover {
+  position: absolute;
+  opacity: 0.2;
 }
 
-.accordeon__trigger {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  background-color: #000;
+.masters__item {
+  position: relative;
+}
+.masters__item:before, .masters__item:after {
+  content: "";
+  display: table;
+}
+.masters__item:after {
+  clear: both;
+}
+.masters__item .masters__image {
+  float: left;
+  width: 49%;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.masters__item .masters__image .masters__changer {
+  float: right;
+  height: 300px;
+  width: 300px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.masters__item .masters__image .masters__changer--first {
+  background: url(../img/masters/kolia_za_rabotoj.jpg) no-repeat -40px -10px;
+}
+.masters__item .masters__image .masters__changer--first:hover {
+  background: url(../img/masters/kolia.jpg) no-repeat -60px 0;
+}
+.masters__item .masters__image .masters__changer--second {
+  background: url(../img/masters/bogdan_za_rabotoj.jpg) no-repeat -100px -10px;
+  float: left;
+}
+.masters__item .masters__image .masters__changer--second:hover {
+  background: url(../img/masters/bogdan.jpg) no-repeat 0px 0;
+  float: left;
+}
+.masters__item .masters__description {
+  height: 360px;
   display: block;
-  padding: 6px;
-  border: 1px solid #ddd;
+  float: left;
+  width: 49%;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.masters__item .masters__description .main__title {
   text-align: left;
-  padding-left: 15px;
+  color: #FFF;
 }
-.accordeon__trigger i {
-  padding-right: 15px;
+.masters__item .masters__description .main__title--odd {
+  text-align: right;
 }
-
-.accordeon__inner {
-  padding-left: 0;
-  background: #FFF;
-}
-
-.accordeon__item {
-  margin-bottom: 10px;
-  list-style: none;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-}
-
-.accordeon__inner-item {
-  list-style: none;
-}
-
-.accordeon__inner-link {
-  text-decoration: none;
-  color: #34495e;
-  border-bottom: 1px dotted #34495e;
-}
-
-.accordeon__inner {
-  display: none;
+.masters__item .masters__description .description {
+  color: #FFF;
 }
 
 /*------------------slideshow---------------*/
