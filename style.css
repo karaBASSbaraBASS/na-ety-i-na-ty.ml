@@ -176,11 +176,12 @@ li.nav__item + li.nav__item {
 .background__cover {
   position: relative;
   overflow: hidden;
-  min-height: 470px;
+  min-height: 490px;
 }
 
 .background__img {
   width: 100%;
+  height: 490px;
   position: absolute;
   left: 0;
 }
@@ -259,12 +260,12 @@ li.nav__item + li.nav__item {
 
 .arrowDown {
   margin: 30px 0;
+  position: reltive;
 }
 
 .arrowDown__border {
   width: 50px;
   height: 50px;
-  border: 3px solid #fff;
   -moz-transform: rotate(45deg);
   /* ╨Ф╨╗╤П Firefox */
   -ms-transform: rotate(45deg);
@@ -277,13 +278,57 @@ li.nav__item + li.nav__item {
   margin: 0 auto;
 }
 
-.arrowDown__arrow {
+.arrowDown__arrow1 {
   padding: 10px;
   margin: 12px;
   border-right: 7px solid #fff;
   border-bottom: 7px solid #fff;
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  -webkit-animation: scrl 2s infinite;
+  animation: scrl 2s infinite;
+  opacity: 0;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
 }
 
+.arrowDown__arrow2 {
+  margin: 12px;
+  border-right: 7px solid #fff;
+  border-bottom: 7px solid #fff;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  padding: 10px;
+  -webkit-animation: scrl 2s infinite;
+  animation: scrl 2s infinite;
+  opacity: 0;
+  -webkit-animation-delay: .30s;
+  animation-delay: .30s;
+}
+
+.arrowDown__arrow3 {
+  margin: 12px;
+  border-right: 7px solid #fff;
+  border-bottom: 7px solid #fff;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  padding: 10px;
+  -webkit-animation: scrl 2s infinite;
+  animation: scrl 2s infinite;
+  opacity: 0;
+}
+
+@keyframes scrl {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 .HomeDescriptoin {
   min-height: 350px;
   background: #FFF;
