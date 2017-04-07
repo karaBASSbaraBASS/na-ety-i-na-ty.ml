@@ -10,6 +10,7 @@
 	<script type="text/javascript" src="assets/4_js-slideshow/js-slideshow.js"></script>
 	<script type="text/javascript" src="assets/7_js-slidecarusel-functions/js-slidecarusel-functions.js"></script>
 	<script type="text/javascript" src="assets/8_js-landing+hash/js-landing+hash.js"></script>
+	<script type="text/javascript" src="assets/9_js-slider2/slider.js"></script>
 </head>
 <body>
 
@@ -32,14 +33,15 @@
 						galery
 					</a>
 				</li>
-				<li class="nav__item">
-					<a href="blog.html" class="nav__item-link">
-						blog
-					</a>
-				</li>
+				
 				<li class="nav__item">
 					<a href="#contacts" class="nav__item-link">
 						contacts
+					</a>
+				</li>
+				<li class="nav__item">
+					<a href="blog.html" class="nav__item-link">
+						blog
 					</a>
 				</li>
 			</ul>
@@ -49,9 +51,10 @@
 		<section class="section section__one" style="" data-section="home">
 			<div class="section__title ">
 				<div class="home__background">
-					<div class="background__cover">
-						<img class="background__img" src="/img/walpapper/5.png"></img>
-
+					<div class="background">
+						<div class="background__cover">
+							<img class="background__img" src="/img/walpapper/5.png"></img>
+						</div>
 						
 						<div class="home__wrap">
 							<div class="homeSlider">
@@ -71,7 +74,7 @@
 								<div class="homeSlider__devider">
 								</div>
 
-								<div class="homeSlider__slider">
+								<!-- <div class="homeSlider__slider">
 									<a href="" class="homeSlider__slider-item">
 										<img src="img/slider/1.png" alt="" class="homeSlider__slider-img active">
 										<img src="img/slider/2.png" alt="" class="homeSlider__slider-img ">
@@ -79,10 +82,29 @@
 										<img src="img/slider/4.png" alt="" class="homeSlider__slider-img ">
 										<img src="img/slider/5.png" alt="" class="homeSlider__slider-img ">
 									</a>
+								</div> -->
+
+								<div class="slider-wrap slide-1">
+								    <div class="slider">
+								        <div class="slide"><img src="img/slider/1.png"></div>
+								        <div class="slide"><img src="img/slider/2.png"></div>
+								        <div class="slide"><img src="img/slider/3.png"></div>
+								        <div class="slide"><img src="img/slider/4.png"></div>
+								        <div class="slide"><img src="img/slider/5.png"></div>
+								    </div>
 								</div>
+								 <!-- 
+								 								<div class="slider-wrap slide-2">
+								    <div class="slider">
+								        <div class="slide">Слайд 1</div>
+								        <div class="slide">Слайд 2</div>
+								        <div class="slide">Слайд 3</div>
+								        <div class="slide">Слайд 4</div>
+								    </div>
+								 								</div> -->
 							</div>
-						</div>
-						<div class="arrowDown">
+
+							<div class="arrowDown">
 							<a href="" class="arrowDown__link">
 								<div class="arrowDown__border">
 									<div class="arrowDown__arrow1">	
@@ -93,9 +115,9 @@
 									</div>
 								</div>
 							</a>
+							</div>
 						</div>
 
-					
 					</div>
 					<div class="HomeDescriptoin content">
 						<div class="HomeDescriptoin__title">
