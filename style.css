@@ -812,35 +812,62 @@ li.nav__item + li.nav__item {
 }
 
 /*------------------Contacts----------------------*/
-.contact__box {
+.contacts__wrap {
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
-.contact__box:before, .contact__box:after {
-  content: "";
-  display: table;
-}
-.contact__box:after {
-  clear: both;
+
+.contact__box {
+  width: 50%;
 }
 
 .address__title {
   color: #fff;
   font-size: 30px;
+  padding-bottom: 5px;
+  margin-top: 30px;
 }
 
-contacts__descr
-i
-p
-a
-address__title
-.address__descr {
+.contacts__descr li {
+  display: block;
+}
+.contacts__descr li:before, .contacts__descr li:after {
+  content: "";
+  display: table;
+}
+.contacts__descr li:after {
+  clear: both;
+}
+.contacts__descr li i, .contacts__descr li p, .contacts__descr li a {
+  color: #fff;
+  font-size: 17px;
+  padding: 0 5px 10px 5px;
+  float: left;
+  display: inline-block;
+}
+.contacts__descr li a {
+  text-decoration: none;
+}
+.contacts__descr li a:hover {
+  text-decoration: underline;
+}
+
+.address__descr p {
+  float: left;
   color: #fff;
   font-size: 17px;
   padding-bottom: 50px;
 }
 
 .form__container {
-  margin: 30px 0;
+  margin: 0 0;
+  width: 50%;
+  position: relative;
+}
+
+#messege {
+  float: left;
 }
 
 ::-webkit-input-placeholder {
@@ -867,8 +894,8 @@ address__title
   background: #FFF;
   width: 50%;
   box-shadow: none;
-  margin-bottom: 30px;
-  padding: 15px 20px;
+  margin-bottom: 10px;
+  padding: 5px 20px;
   font: bold 14px/14px Arial, sans-serif;
   color: #222;
   -webkit-border-radius: 4px;
@@ -879,16 +906,33 @@ address__title
 
 #messege textarea {
   border: none;
-  height: 210px;
-  width: 100%;
+  height: 100px;
+  width: 92%;
   resize: none;
 }
 
 input.btn {
   /* ╨┐╤А╨░╨▓╨║╨╕ ╨┤╨╗╤П ╨╝╨╛╨╖╨╕╨╗╤Л */
   border: 0;
-  height: 20px;
+  height: 85px;
   color: #000;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  background: #fff url(../img/send-mail.png) no-repeat 21px 30px;
+  cursor: pointer;
+  padding-bottom: 44px;
+  font-weight: 600;
+}
+
+input.btn:hover {
+  background: #fff url(../img/send-mail-hover.png) no-repeat 21px 30px;
+  box-shadow: inset 0px 0px 3px 1px #000;
+  font-weight: 600;
 }
 
 .box {
@@ -896,10 +940,9 @@ input.btn {
   margin: 0 auto;
 }
 
-.gogleMap {
-  margin-bottom: 30px;
-}
-
-#messege {
-  float: left;
+.line {
+  height: 2px;
+  background-color: #fff;
+  width: 90%;
+  margin: 10px auto 20px auto;
 }
