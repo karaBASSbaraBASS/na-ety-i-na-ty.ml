@@ -52,7 +52,7 @@ var timerid = new Array();
 var neddRotatr = new Array();
      
 /* Для каждого .slider-wrap  */
-$('.slider-wrap').each(function(index) {
+$('.slider').each(function(index) {
     var mainThis = $(this)
     slideCount[index] = $(".slide", mainThis).size();
     activeSlide[index] = 0;
