@@ -711,6 +711,7 @@ li.nav__item + li.nav__item {
   overflow: hidden;
   position: relative;
   float: left;
+  cursor: pointer;
 }
 
 .galery__img {
@@ -800,7 +801,6 @@ li.nav__item + li.nav__item {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1000;
   text-indent: 200%;
   white-space: nowrap;
   font-size: 0;
@@ -945,4 +945,58 @@ input.btn:hover {
   background-color: #fff;
   width: 90%;
   margin: 10px auto 20px auto;
+}
+
+/*------------------gallery slideshow----------------------*/
+.gallery__slider {
+  position: fixed;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  /*╨┐╨╛╤Б╤З╨╕╤В╨░╤В╤М ╤Б╨┤╨▓╨╕╨│ ╨╛╤В ╨▓╨╡╤А╤Е╨╜╨╡╨│╨╛ ╨║╤А╨░╤П ╨╜╨░ ╨▓╤Л╤Б╨╛╤В╤Г ╨╡╨║╤Г╤Й╨╡╨╣ ╤Б╨╡╨║╤Ж╨╕╨╕*/
+  z-index: 999;
+  visibility: hidden;
+}
+.gallery__slider .left__button {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 50px;
+  color: #fff;
+  font-size: 50px;
+  cursor: pointer;
+}
+.gallery__slider .slider__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  alighn-items: center;
+  justify-content: center;
+  max-height: 680px;
+}
+.gallery__slider .slider__wrap .current__img {
+  height: 680px;
+  width: auto;
+  display: flex;
+}
+.gallery__slider .slider__wrap .current__img .insertImg {
+  margin: auto;
+}
+.gallery__slider .slider__wrap .current__img .close {
+  position: absolute;
+  font-size: 50px;
+  color: #FFF;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.gallery__slider .right__button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 50px;
+  color: #fff;
+  font-size: 50px;
+  cursor: pointer;
 }

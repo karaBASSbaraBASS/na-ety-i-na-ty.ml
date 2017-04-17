@@ -626,6 +626,7 @@ padding-top: 50px;
   overflow: hidden;
   position: relative;
   float: left;
+  cursor: pointer;
 }
 
 .galery__img {
@@ -715,7 +716,6 @@ padding-top: 50px;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1000;
   text-indent: 200%;
   white-space: nowrap;
   font-size: 0;
@@ -859,4 +859,66 @@ padding-top: 50px;
   background-color: #fff;
   width: 90%;
   margin: 10px auto 20px auto;
+}
+
+/*------------------gallery slideshow----------------------*/
+
+.gallery__slider {
+  position: fixed;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0; /*посчитать сдвиг от верхнего края на высоту екущей секции*/
+  z-index: 999;
+  visibility: hidden;
+
+  .left__button {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 50px;
+    color: #fff;
+    font-size: 50px;
+    cursor: pointer;
+  }
+
+  .slider__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    alighn-items: center;
+    justify-content: center;
+    max-height: 680px;
+
+    .current__img {
+      height: 680px;
+      width: auto;
+      display: flex;
+      
+      .insertImg {
+        margin: auto;
+        
+      }
+
+      .close {
+        position: absolute;
+        font-size: 50px;
+        color: #FFF;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .right__button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 50px;
+    color: #fff;
+    font-size: 50px;
+    cursor: pointer;
+  }
+
 }
